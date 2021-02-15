@@ -26,8 +26,8 @@
 |       |         5        |   IRIS  |         ReLU        |  0.002 |                            |
 |       |         6        |  MNIST  |         ReLU        |  0.001 |                            |
 |       |         7        |  MNIST  |         ReLU        |  0.002 |                            |
-|   3   |         8        |   IRIS  |         ReLU        |  0.001 | Inputs near the boundaries |
-|       |         9        |   IRIS  |         ReLU        |  0.002 | Inputs near the boundaries |
+|   3   |         8        |   NULL  |         ReLU        |  0.001 | Inputs near the boundaries |
+|       |         9        |   NULL  |         ReLU        |  0.002 | Inputs near the boundaries |
 
 - PDE experiments
 
