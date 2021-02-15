@@ -1,5 +1,8 @@
 # Interval Lipschitz NN
 
+## Environment
+```Ubuntu 20.04 LTS```
+
 ## Dependency
 - art (adversarial-robustness-toolbox)
 - MPFI (boost in cpp)
