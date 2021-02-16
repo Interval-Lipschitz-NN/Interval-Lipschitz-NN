@@ -30,7 +30,7 @@ def loadData(index, isOwnDataset, randomSeed):
         inputNum = 64
         outputNum = 10
 
-    # MNIST dataset -- inputs: 28*28 = 784; outputs: 10d
+    # MNIST dataset -- inputs: 28*28 = 784d; outputs: 10d
     elif index == 2:
         print("Using MNIST dataset.")
         data_train = datasets.MNIST(root = "./data/",
@@ -51,6 +51,40 @@ def loadData(index, isOwnDataset, randomSeed):
 
         inputNum = 28*28
         outputNum = 10
+
+    # Diabetes -- inputs: 8d; outputs: 2d
+    elif index == 3:
+        data=pd.read_csv('./data/diabetes.csv')
+        X=data.drop(['Outcome'], axis=1)
+        y=data['Outcome']
+        X_train, X_test, Y_train, Y_test= train_test_split(X,y, test_size=0.2, random_state=10)
+        X_train = X_train.values.tolist()
+        X_test = X_test.values.tolist()
+        Y_train = Y_train.values.tolist()
+        Y_test = Y_test.values.tolist()
+
+        inputNum = 8
+        outputNum = 2
+
+    # Balance-scale -- inputs: 4d; outputs: 3d
+    elif index == 4:
+        data=pd.read_csv('./data/balance-scale.csv')
+        X=data.drop(['Class'], axis=1)
+        Y=data['Class']
+        y = []
+        for i in Y:
+            if i == 'L':
+                y.append(0)
+            elif i == 'B':
+                y.append(1)
+            else:
+                y.append(2)
+        X_train, X_test, Y_train, Y_test= train_test_split(X,y, test_size=0.2, random_state=10)
+        X_train = X_train.values.tolist()
+        X_test = X_test.values.tolist()
+
+        inputNum = 4
+        outputNum = 3
 
     X_train = torch.FloatTensor(X_train)
     X_test = torch.FloatTensor(X_test)

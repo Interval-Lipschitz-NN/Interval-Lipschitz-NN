@@ -1,11 +1,11 @@
-# Interval Lipschitz NN
+# Interval Lipschitz NN - UAI 2021
 
 ## Environment
 ```Ubuntu 20.04 LTS```
 
 ## Dependency
 - art (adversarial-robustness-toolbox)
-- MPFI (boost in cpp)
+- MPFI (boost library in cpp)
 - matplotlib 3.3.3
 - numpy 1.19.4
 - pybind11 2.6.1
@@ -15,8 +15,8 @@
 ## Running Code
 ``` python3 main.py```
 
-## Experiments Corresponding to the Tables
-**All the details are in main() function which is in main.py**
+## Experiments Corresponding to the Tables and Graphs
+**All the details are in the main() function which is in main.py**
 - Experimental results in the paper's tables
 
 | Table | Experiment Index | Dataset | Activation Function | Radius |          Comments          |
