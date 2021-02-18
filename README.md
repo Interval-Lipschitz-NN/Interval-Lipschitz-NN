@@ -1,4 +1,4 @@
-# Interval Lipschitz NN - UAI 2021
+# Validated Interval Computation of the Lipschitz Constant of Neural Networks - UAI 2021
 
 ## Environment
 ```Ubuntu 20.04 LTS```
@@ -15,7 +15,7 @@
 ## Running Code
 ``` python3 main.py```
 
-## Experiments Corresponding to the Tables and Graphs
+## Experiments
 **All the details are in the main() function which is in main.py**
 - Experimental results in the paper's tables
 
@@ -87,7 +87,7 @@ INTERVAL-LIPSCHITZ-NN
 |
 |--- IntervalCPP_Sigmoid.cpython-38-x86_64-linux-gnu.so
 |
-|--- main.pu
+|--- main.pu (Run this file)
 |
 |--- Nets.py
 
