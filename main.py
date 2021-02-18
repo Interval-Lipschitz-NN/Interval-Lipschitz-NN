@@ -54,7 +54,7 @@ def experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batc
     lipschitz, clever_x_test, clever_y_test = CLEVER_Lipschitz_Default_Dataset(X_test, myPred, classifier, Nb, Ns, linf_radius, pool_size)
 
     # Store Parameters
-    storeParameters(model, lipschitz, clever_x_test, clever_y_test, experIndex)
+    # storeParameters(model, lipschitz, clever_x_test, clever_y_test, experIndex)
 
     # Get Interval Lipschitz Constant
     if actFunction == "ReLU":
@@ -124,7 +124,7 @@ def special_experiment_ReLU(experIndex, trainedNN, modelName, batchNum, epochNum
     lipschitz, clever_x_test, clever_y_test = CLEVER_Lipschitz_Special(x_special, myPred, classifier, Nb, Ns, linf_radius, pool_size)
 
     # Store Parameters
-    storeParameters(model, lipschitz, clever_x_test, clever_y_test, experIndex)
+    # storeParameters(model, lipschitz, clever_x_test, clever_y_test, experIndex)
 
     # Get Interval Lipschitz Constant
     IntervalCPP_ReLU.get_interval_Lipschitz_CPP(str(experIndex), linf_radius, inputNum, hiddenNum, outputNum, comparedToCLEVER, maxIterationNum, minGap, maxBoxes)
@@ -159,7 +159,7 @@ def experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max
 
 
     # Store Parameters 
-    storeParameters(model, lipschitz, [x2], 0, experIndex)
+    # storeParameters(model, lipschitz, [x2], 0, experIndex)
 
     # Get Interval
     inputs_size = 2 
@@ -188,290 +188,290 @@ def main():
     ################################################
     # Table 1
     ################################################
-    # """
-    # Table 1 | Experiment 00
-    # Dataset: IRIS | Activation Function: Sigmoid
-    # """
-    # experIndex = 0
-    # datasetIndex = 0
-    # actFunction = "Sigmoid"
-    # trainedNN = True
-    # modelName = "IRIS/IRIS00.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 10
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "IRIS00.pt"
-    # randomSeed = 1
-    # linf_radius = 0.001
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Table 1 | Experiment 00
+    Dataset: IRIS | Activation Function: Sigmoid
+    """
+    experIndex = 0
+    datasetIndex = 0
+    actFunction = "Sigmoid"
+    trainedNN = True
+    modelName = "IRIS/IRIS00.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 10
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "IRIS00.pt"
+    randomSeed = 1
+    linf_radius = 0.001
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
 
     
-    # """
-    # Table 1 | Experiment 01
-    # Dataset: IRIS | Activation Function: Sigmoid
-    # """
-    # experIndex = 1
-    # datasetIndex = 0
-    # actFunction = "Sigmoid"
-    # trainedNN = True
-    # modelName = "IRIS/IRIS01.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 10
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "IRIS01.pt"
-    # randomSeed = 1
-    # linf_radius = 0.002
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Table 1 | Experiment 01
+    Dataset: IRIS | Activation Function: Sigmoid
+    """
+    experIndex = 1
+    datasetIndex = 0
+    actFunction = "Sigmoid"
+    trainedNN = True
+    modelName = "IRIS/IRIS01.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 10
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "IRIS01.pt"
+    randomSeed = 1
+    linf_radius = 0.002
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
 
 
-    # """
-    # Table 1 | Experiment 02
-    # Dataset:  | Activation Function: Sigmoid
-    # """
-    # experIndex = 2
-    # datasetIndex = 4
-    # actFunction = "Sigmoid"
-    # trainedNN = True
-    # modelName = "Balance/Balance00.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 10
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "Balance00.pt"
-    # randomSeed = 1
-    # linf_radius = 0.001
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Table 1 | Experiment 02
+    Dataset:  | Activation Function: Sigmoid
+    """
+    experIndex = 2
+    datasetIndex = 4
+    actFunction = "Sigmoid"
+    trainedNN = True
+    modelName = "Balance/Balance00.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 10
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "Balance00.pt"
+    randomSeed = 1
+    linf_radius = 0.001
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
 
 
-    # """
-    # Table 1 | Experiment 03
-    # Dataset:  | Activation Function: Sigmoid
-    # """
-    # experIndex = 3
-    # datasetIndex = 4
-    # actFunction = "Sigmoid"
-    # trainedNN = True
-    # modelName = "Balance/Balance01.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 10
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "Balance01.pt"
-    # randomSeed = 2
-    # linf_radius = 0.002
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Table 1 | Experiment 03
+    Dataset:  | Activation Function: Sigmoid
+    """
+    experIndex = 3
+    datasetIndex = 4
+    actFunction = "Sigmoid"
+    trainedNN = True
+    modelName = "Balance/Balance01.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 10
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "Balance01.pt"
+    randomSeed = 2
+    linf_radius = 0.002
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
 
 
-    ################################################
+    # ###############################################
     # Table 2
+    # ###############################################
+    """
+    Table 2 | Experiment 04
+    Dataset: IRIS | Activation Function: ReLU
+    """
+    experIndex = 4
+    datasetIndex = 0
+    actFunction = "ReLU"
+    trainedNN = True
+    modelName = "IRIS/IRIS02.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 10
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "IRIS02.pt"
+    randomSeed = 1
+    linf_radius = 0.001
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+
+    
+    """
+    Table 2 | Experiment 05
+    Dataset: IRIS | Activation Function: ReLU
+    """
+    experIndex = 5
+    datasetIndex = 0
+    actFunction = "ReLU"
+    trainedNN = True
+    modelName = "IRIS/IRIS03.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 10
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "IRIS03.pt"
+    randomSeed = 1
+    linf_radius = 0.002
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+
+    
+    """
+    Table 2 | Experiment 06
+    Dataset: MNIST | Activation Function: ReLU
+    """
+    experIndex = 6
+    datasetIndex = 2
+    actFunction = "ReLU"
+    trainedNN = True
+    modelName = "MNIST/MNIST.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 30
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "MNIST.pt"
+    randomSeed = 0
+    linf_radius = 0.001
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+
+
+    """
+    Table 2 | Experiment 07
+    Dataset: MNIST | Activation Function: ReLU
+    """
+    experIndex = 7
+    datasetIndex = 2
+    actFunction = "ReLU"
+    trainedNN = True
+    modelName = "MNIST/MNIST.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 30
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "MNIST.pt"
+    randomSeed = 0
+    linf_radius = 0.002
+    experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
+               hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+
+
     ################################################
-    # """
-    # Table 2 | Experiment 04
-    # Dataset: IRIS | Activation Function: ReLU
-    # """
-    # experIndex = 4
-    # datasetIndex = 0
-    # actFunction = "ReLU"
-    # trainedNN = True
-    # modelName = "IRIS/IRIS02.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 10
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "IRIS02.pt"
-    # randomSeed = 1
-    # linf_radius = 0.001
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    # Table 3
+    ################################################
+    """
+    Table 3 | Experiment 08
+    Dataset: IRIS | Activation Function: ReLU
+    """
+    experIndex = 8
+    trainedNN = True
+    modelName = "IRIS/IRIS04.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 30
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "IRIS04.pt"
+    randomSeed = 1
+    linf_radius = 0.001
+    special_experiment_ReLU(experIndex, trainedNN, modelName, batchNum, epochNum, hiddenNum, 
+                            comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
 
     
-    # """
-    # Table 2 | Experiment 05
-    # Dataset: IRIS | Activation Function: ReLU
-    # """
-    # experIndex = 5
-    # datasetIndex = 0
-    # actFunction = "ReLU"
-    # trainedNN = True
-    # modelName = "IRIS/IRIS03.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 10
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "IRIS03.pt"
-    # randomSeed = 1
-    # linf_radius = 0.002
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
-
-    
-    # """
-    # Table 2 | Experiment 06
-    # Dataset: MNIST | Activation Function: ReLU
-    # """
-    # experIndex = 6
-    # datasetIndex = 2
-    # actFunction = "ReLU"
-    # trainedNN = True
-    # modelName = "MNIST/MNIST.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 30
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "MNIST.pt"
-    # randomSeed = 0
-    # linf_radius = 0.001
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Table 3 | Experiment 09
+    Dataset: IRIS | Activation Function: ReLU
+    """
+    experIndex = 9
+    trainedNN = True
+    modelName = "IRIS/IRIS05.pt"
+    batchNum = 30
+    epochNum = 100
+    hiddenNum = 30
+    comparedToCLEVER = False
+    saveModel = False
+    saveModelName = "IRIS05.pt"
+    randomSeed = 1
+    linf_radius = 0.002
+    special_experiment_ReLU(experIndex, trainedNN, modelName, batchNum, epochNum, hiddenNum, 
+                            comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
 
 
-    # """
-    # Table 2 | Experiment 07
-    # Dataset: MNIST | Activation Function: ReLU
-    # """
-    # experIndex = 7
-    # datasetIndex = 2
-    # actFunction = "ReLU"
-    # trainedNN = True
-    # modelName = "MNIST/MNIST.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 30
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "MNIST.pt"
-    # randomSeed = 0
-    # linf_radius = 0.002
-    # experiment(experIndex, datasetIndex, actFunction, trainedNN, modelName, batchNum, epochNum, 
-    #            hiddenNum, comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    ################################################
+    # PDE
+    ################################################
+    """
+    Graph 01 | Experiment 10
+    Center Point: [0.5, 0.5] | Radius: 0.5
+    """
+    experIndex = 10
+    x0 = [0.5, 0.5]
+    linf_radius = 0.5
+    comparedToCLEVER = False
+    file_name = "Isolated_Boxes.txt"
+    max_boxes = 60000
+    maxIterationNum = 15
+    experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
 
+    """
+    Graph 02 | Experiment 11
+    Center Point: [0.5, 0.5] | Radius: 0.1
+    """
+    experIndex = 11
+    x0 = [0.5, 0.5]
+    linf_radius = 0.1
+    comparedToCLEVER = False
+    file_name = "Isolated_Boxes.txt"
+    max_boxes = 60000
+    maxIterationNum = 10
+    experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
 
-    # ################################################
-    # # Table 3
-    # ################################################
-    # """
-    # Table 3 | Experiment 08
-    # Dataset: IRIS | Activation Function: ReLU
-    # """
-    # experIndex = 8
-    # trainedNN = True
-    # modelName = "IRIS/IRIS04.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 30
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "IRIS04.pt"
-    # randomSeed = 1
-    # linf_radius = 0.001
-    # special_experiment_ReLU(experIndex, trainedNN, modelName, batchNum, epochNum, hiddenNum, 
-    #                         comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Graph 03 | Experiment 12
+    Center Point: [0.3, 0.3] | Radius: 0.1
+    """
+    experIndex = 12
+    x0 = [0.3, 0.3]
+    linf_radius = 0.1
+    comparedToCLEVER = False
+    file_name = "Isolated_Boxes.txt"
+    max_boxes = 60000
+    maxIterationNum = 15
+    experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
 
-    
-    # """
-    # Table 3 | Experiment 09
-    # Dataset: IRIS | Activation Function: ReLU
-    # """
-    # experIndex = 9
-    # trainedNN = True
-    # modelName = "IRIS/IRIS05.pt"
-    # batchNum = 30
-    # epochNum = 100
-    # hiddenNum = 30
-    # comparedToCLEVER = False
-    # saveModel = False
-    # saveModelName = "IRIS05.pt"
-    # randomSeed = 1
-    # linf_radius = 0.002
-    # special_experiment_ReLU(experIndex, trainedNN, modelName, batchNum, epochNum, hiddenNum, 
-    #                         comparedToCLEVER, saveModel, saveModelName, randomSeed, linf_radius)
+    """
+    Graph 04 | Experiment 13
+    Center Point: [0.7, 0.7] | Radius: 0.1
+    """
+    experIndex = 13
+    x0 = [0.7, 0.7]
+    linf_radius = 0.1
+    comparedToCLEVER = False
+    file_name = "Isolated_Boxes.txt"
+    max_boxes = 60000
+    maxIterationNum = 15
+    experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
 
+    """
+    Graph 05 | Experiment 14
+    Center Point: [0.1, 0.1] | Radius: 0.1
+    """
+    experIndex = 14
+    x0 = [0.1, 0.1]
+    linf_radius = 0.1
+    comparedToCLEVER = False
+    file_name = "Isolated_Boxes.txt"
+    max_boxes = 60000
+    maxIterationNum = 25
+    experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
 
-    # ################################################
-    # # PDE
-    # ################################################
-    # """
-    # Graph 01 | Experiment 10
-    # Center Point: [0.5, 0.5] | Radius: 0.5
-    # """
-    # experIndex = 10
-    # x0 = [0.5, 0.5]
-    # linf_radius = 0.5
-    # comparedToCLEVER = False
-    # file_name = "Isolated_Boxes.txt"
-    # max_boxes = 30000
-    # maxIterationNum = 10
-    # experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
-
-    # """
-    # Graph 02 | Experiment 11
-    # Center Point: [0.5, 0.5] | Radius: 0.1
-    # """
-    # experIndex = 11
-    # x0 = [0.5, 0.5]
-    # linf_radius = 0.1
-    # comparedToCLEVER = False
-    # file_name = "Isolated_Boxes.txt"
-    # max_boxes = 60000
-    # maxIterationNum = 25
-    # experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
-
-    # """
-    # Graph 03 | Experiment 12
-    # Center Point: [0.3, 0.3] | Radius: 0.1
-    # """
-    # experIndex = 12
-    # x0 = [0.3, 0.3]
-    # linf_radius = 0.1
-    # comparedToCLEVER = False
-    # file_name = "Isolated_Boxes.txt"
-    # max_boxes = 60000
-    # maxIterationNum = 15
-    # experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
-
-    # """
-    # Graph 04 | Experiment 13
-    # Center Point: [0.7, 0.7] | Radius: 0.1
-    # """
-    # experIndex = 13
-    # x0 = [0.7, 0.7]
-    # linf_radius = 0.1
-    # comparedToCLEVER = False
-    # file_name = "Isolated_Boxes.txt"
-    # max_boxes = 60000
-    # maxIterationNum = 15
-    # experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
-
-    # """
-    # Graph 05 | Experiment 14
-    # Center Point: [0.1, 0.1] | Radius: 0.1
-    # """
-    # experIndex = 14
-    # x0 = [0.1, 0.1]
-    # linf_radius = 0.1
-    # comparedToCLEVER = False
-    # file_name = "Isolated_Boxes.txt"
-    # max_boxes = 60000
-    # maxIterationNum = 25
-    # experiment_PDE(experIndex, x0, linf_radius, comparedToCLEVER, file_name, max_boxes, maxIterationNum)
-
-    # """
-    # Graph 06 | Experiment 15
-    # Center Point: [0.9, 0.9] | Radius: 0.1
-    # """
+    """
+    Graph 06 | Experiment 15
+    Center Point: [0.9, 0.9] | Radius: 0.1
+    """
     experIndex = 15
     x0 = [0.9, 0.9]
     linf_radius = 0.1
